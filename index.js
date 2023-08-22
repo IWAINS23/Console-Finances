@@ -115,3 +115,19 @@ if(change > greatest[1]){
 }
 }
 }
+
+for(let i = 0; i < netArray.length; i++){
+  netChangeSum += netArray[i];
+}
+
+average = Math.round((netChangeSum/86)*100)/100;
+
+analysis = 'Financial Analysis' + '\n' +
+'--------------------' + '\n' + 
+'Total months: ' + months + '\n' + 
+'Total; £' + total + '\n' +
+'Average Change: ' + average + '\n' +
+'Greatest Increase in Profit: ' + '\n' +
+'Greatest Decrease in Profit: ' + '\n';
+
+console.log(analysis)
