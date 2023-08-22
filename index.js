@@ -95,3 +95,23 @@ let analysis;
 let net = 0 
 let netArray = [];
 let netChangeSum = 0
+
+// least 
+// greatest
+let least = ['', 9999999999999];
+let greatest = ['', 0]
+
+for(let i = 0 ; i < finances.length; i++){
+  for(let i2 = 0; i2 < finances[i].length; i2++){
+   
+    if(typeof finances[i][i2] !== 'string'){
+      total += finances[i][i2]
+      change = finances[i][i2] - net;
+      net = finances[i][i2];
+      netArray.push(change);
+if(change > greatest[1]){
+  greatest = [finances[i][0]]
+}
+}
+}
+}
