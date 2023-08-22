@@ -95,9 +95,6 @@ let analysis;
 let net = 0 
 let netArray = [];
 let netChangeSum = 0
-
-// least 
-// greatest
 let least = ['', 9999999999999];
 let greatest = ['', 0]
 
@@ -124,14 +121,14 @@ for(let i = 0; i < netArray.length; i++){
   netChangeSum += netArray[i];
 }
 
-average = Math.round((netChangeSum/86)*100)/100;
+average = Math.round((netChangeSum/finances.length)*100)/100;
 
 analysis = 'Financial Analysis' + '\n' +
 '--------------------' + '\n' + 
 'Total months: ' + months + '\n' + 
 'Total; £' + total + '\n' +
 'Average Change: ' + average + '\n' +
-'Greatest Increase in Profit: ' + greatest + '\n' +
-'Greatest Decrease in Profit: ' + least + '\n';
+'Greatest Increase in Profit: ' + greatest[0] + ': £' + greatest[1] + '\n' +
+'Greatest Decrease in Profit: ' + least[0] + ': £' + least[1] + '\n';
 
 console.log(analysis)
