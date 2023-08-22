@@ -110,7 +110,11 @@ for(let i = 0 ; i < finances.length; i++){
       net = finances[i][i2];
       netArray.push(change);
 if(change > greatest[1]){
-  greatest = [finances[i][0]]
+  greatest = [finances[i][0],finances[i][1]]
+}
+
+if(change < least[1]){
+  least = [finances[i][0],finances[i][1]]
 }
 }
 }
@@ -127,7 +131,7 @@ analysis = 'Financial Analysis' + '\n' +
 'Total months: ' + months + '\n' + 
 'Total; £' + total + '\n' +
 'Average Change: ' + average + '\n' +
-'Greatest Increase in Profit: ' + '\n' +
-'Greatest Decrease in Profit: ' + '\n';
+'Greatest Increase in Profit: ' + greatest + '\n' +
+'Greatest Decrease in Profit: ' + least + '\n';
 
 console.log(analysis)
